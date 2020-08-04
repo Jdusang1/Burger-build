@@ -1,0 +1,15 @@
+{{!-- <li>
+    {{burger_name}}
+
+    <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{devoured}}">
+        {{#if devoured}}Devoured!{{else}}Not Eatin!{{/if}}
+    </button>
+    <button class="delete-burger" data-id="{{id}}">Delete Burger</button>
+</li> --}}
+
+<div class="row">
+    <div class="col d-flex justify-content-around">{{burger_name}}<button
+            class="btn success {{#if devoured}}delete-burger{{else}}eat-burger{{/if}}"
+            data-id="{{id}}">{{#if devoured}}That Was Good!{{else}}Eat Me!{{/if}}</button>
+    </div>
+</div>

@@ -1,0 +1,72 @@
+{{!-- <ul>
+    {{#each burgers}}
+    {{#unless devoured}}
+    {{> burgers/burger-block devoured=true}}
+    {{/unless}}
+    {{/each}}
+</ul> --}}
+
+
+
+{{!-- <ul>
+    {{#each burgers}}
+    {{#if devoured}}
+    {{> burgers/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul> --}}
+
+<div class="container-fluid ">
+    <div class="row justify-content-center">
+        <div class="col-4">
+            <div id="burger-header">
+                <div class="card-body"><img src="/assets/media/kindpng_1135586.png" class="card-img-top img-fluid"
+                        alt="burgericon" id="burger-icon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+
+        <div id="burger-title">
+            <h1>We got Cheesburgers Maaaan!</h1>
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="col-6 d-flex justify-content-around">
+            <h2>Available Burgers</h2>
+        </div>
+        <div class="col-6 d-flex justify-content-around">
+            <h2>Eatin Burgers</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6 d-flex justify-content-around">
+            <div class="container">
+                {{#each burgers}}
+                {{#unless devoured}}
+                {{> burgers/burger-block}}
+                {{/unless}}
+                {{/each}}
+
+            </div>
+        </div>
+        <div class="col-6 d-flex justify-content-around">
+            <div class="container">
+                {{#each burgers}}
+                {{#if devoured}}
+                {{> burgers/burger-block}}
+                {{/if}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <textarea name="add a burger" id="addBurgerText" placeholder="add a new burger"></textarea>
+        <input type="button" id="add-button" value="Add">
+    </div>
+</div>
